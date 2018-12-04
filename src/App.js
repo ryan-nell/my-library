@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Bookshelf from './Bookshelf';
-import NewList from './NewList';
-import PastList from './PastList'
 import * as BooksAPI from './BooksAPI'
 
 class App extends Component {
@@ -18,27 +16,25 @@ class App extends Component {
     })
   }
 
-  const
-
   render() {
     return (
       <div className="App">
         <div>
-          <h1>Currently Reading</h1>
+          <h1 className='shelf-header'>Currently Reading</h1>
           <Bookshelf books={this.state.books.filter( (currentBook) => (
               currentBook.shelf === 'currentlyReading'
             ))}
           />
         </div>
         <div>
-          <h1>Have Read</h1>
+          <h1 className='shelf-header'>Have Read</h1>
           <Bookshelf books={this.state.books.filter( (currentBook) => (
               currentBook.shelf === 'read'
             ))}
           />
         </div>
         <div>
-          <h1>Want To Read</h1>
+          <h1 className='shelf-header'>Want To Read</h1>
           <Bookshelf books={this.state.books.filter( (currentBook) => (
               currentBook.shelf === 'wantToRead'
             ))}
