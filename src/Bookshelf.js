@@ -1,27 +1,20 @@
 import React, { Component } from 'react';
 
-
 // This displays books that i am currently reading
 class Bookshelf extends Component {
 
+// Define state for the menu
   state = {
-    showMenu: false
-  }
+    showMenu: null
+  };
 
-
-  displayMenu = (showMenu) => {
-    if(this.state.showMenu === false){
-      this.setState({
-        showMenu: true
-      })
-    }
-    else{
-      this.setState({
-        showMenu: false
-      })
-    }
-    console.log(this.props.books)
-  }
+  // Display/Hide the menu by changing the state
+  displayMenu = id => {
+    this.setState( (state) =>({
+      // Check & set the state with the id of the book or null
+      showMenu: state.showMenu === id ? null : id
+    }));
+  };
 
   render() {
     return(
@@ -30,8 +23,8 @@ class Bookshelf extends Component {
           {this.props.books.map((book) => (
             <div key={book.id}>
               <img src={book.imageLinks.thumbnail} alt="Book cover" />
-              <button onClick={this.displayMenu} type="button">Click</button>
-              { this.state.showMenu ?
+              <button onClick={() => this.displayMenu(book.id)} type="button">Click</button>
+              { this.state.showMenu === book.id ? (
                   <div className='dropdown-state'>
                     <p className="dropdown-option">Move to... </p>
                     <button className="dropdown-option" type="button">Currently Reading</button>
@@ -39,7 +32,7 @@ class Bookshelf extends Component {
                     <button className="dropdown-option" type="button">Want to Read</button>
                     <button className="dropdown-option" type="button">None</button>
                   </div>
-                : null
+                ): null
               }
               <div className='book-details'>
                 <p className='book-title'>{book.title}</p>
