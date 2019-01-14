@@ -3,16 +3,16 @@ import React, { Component } from 'react';
 // This displays books that i am currently reading
 class Bookshelf extends Component {
 
-// Define state for the menu
+// Define states
   state = {
-    showMenu: null
+    showMenu: null,
   };
 
   // Display/Hide the menu by changing the state
   displayMenu = id => {
-    this.setState( (state) =>({
+    this.setState((state) => ({
       // Check & set the state with the id of the book or null
-      showMenu: state.showMenu === id ? null : id
+      showMenu: state.showMenu === id ? null : id,
     }));
   };
 
@@ -27,10 +27,10 @@ class Bookshelf extends Component {
               { this.state.showMenu === book.id ? (
                   <div className='dropdown-state'>
                     <p className="dropdown-option">Move to... </p>
-                    <button className="dropdown-option" type="button">Currently Reading</button>
-                    <button className="dropdown-option" type="button">Have Read</button>
-                    <button className="dropdown-option" type="button">Want to Read</button>
-                    <button className="dropdown-option" type="button">None</button>
+                    <button onClick={(e) => {this.props.newShelf( e.target.value); }} className="dropdown-option" value="none" type="button">None</button>
+                    <button onClick={(e) => {this.props.newShelf( e.target.value); }} className="dropdown-option" value="currentlyReading" type="button">Currently Reading</button>
+                    <button onClick={(e) => {this.props.newShelf( e.target.value); }} className="dropdown-option" value="read" type="button">Have Read</button>
+                    <button onClick={(e) => {this.props.newShelf( e.target.value); }} className="dropdown-option" value="wantToRead" type="button">Want to Read</button>
                   </div>
                 ): null
               }
