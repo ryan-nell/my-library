@@ -9,29 +9,31 @@ class App extends Component {
 
   // State object to query the books array
   state = {
-    books: [],
-
+    books: []
   };
 
   // Ajax call using lifecycle hook to get the books from a local db.
   componentDidMount() {
-    //Get all the books using a promise and set the state
-    BooksAPI.getAll().then((books) => {
-      this.setState({books})
+    this.getAllBooks();
+  };
+
+  //Get all the books using a promise
+  getAllBooks = () => {
+    BooksAPI.getAll().then(books => {
+      this.setState({ books });
     });
   };
 
-  updateShelf = (targetShelf) => {
-    console.log(this.state.currentShelf);
-    this.setState({
-      currentShelf: targetShelf
+  // Update the state of the books on from API
+  updateShelf = (targetBook, targetShelf) => {
+    BooksAPI.update(targetBook, targetShelf).then(() => {
+      this.getAllBooks();
     });
   };
 
   render() {
     return (
       <div className="App">
-
         <Route exact path='/' render={() => (
           <div className="bookshelf-types">
             <div>
@@ -50,7 +52,7 @@ class App extends Component {
           </div>)}
         />
         <Route path="/booksearch" render={({history}) => (
-            <BookSearch books={this.state.books} />
+            <BookSearch books={this.state.books}/>
           )}
         />
       </div>
