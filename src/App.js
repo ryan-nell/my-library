@@ -22,6 +22,7 @@ class App extends Component {
     BooksAPI.getAll().then(books => {
       this.setState({ books });
     });
+
   };
 
   // Update the state of the books on from API
@@ -38,6 +39,7 @@ class App extends Component {
           <div className="bookshelf-types">
             <div>
               <h1 className="shelf-header">Currently Reading</h1>
+              
               <Bookshelf newShelf={this.updateShelf}  books={this.state.books.filter((currentBook) => (currentBook.shelf === "currentlyReading"))}/>
             </div>
             <div>
@@ -52,7 +54,13 @@ class App extends Component {
           </div>)}
         />
         <Route path="/booksearch" render={({history}) => (
-            <BookSearch books={this.state.books}/>
+            <BookSearch
+              books={this.state.books}
+              newShelf={(targetBook, targetShelf) => {
+                this.updateShelf(targetBook, targetShelf);
+                history.push('/');
+              }}
+              />
           )}
         />
       </div>
