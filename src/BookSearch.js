@@ -38,6 +38,9 @@ class BookSearch extends Component {
         }
       });
     }
+    else {
+      this.setState({ bookResults: [] });
+    }
   };
 
   render() {
