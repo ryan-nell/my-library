@@ -56,7 +56,7 @@ class Bookshelf extends Component {
               </div>
               <div className='book-content'>
                 <p className='book-title'>{book.title}</p>
-                <p className="book-authors">{book.authors ? book.authors[0]: null}</p>
+                <p className="book-authors">{book.authors ? book.authors.join('\n') : null}</p>
               </div>
             </div>
           ))}
