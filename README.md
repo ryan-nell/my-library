@@ -1,44 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MyReads Project
 
-## Available Scripts
+MyReads is a simple library web application that displays in their sates of:
+- Reading
+- Have README
+- Want To Read
 
-In the project directory, you can run:
+The purpose of this project is to understand the fundamentals of React.js by as creating and rendering components, using Props to display data and State to update the data.
+This is a project that is part of the Front-End Web Developer Nanodegree by Udacity.
 
-### `npm start`
+# Setup
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Download the repository
+- Open terminal and redirect to the directory
+- Type npm start
+- The application will start in a new browser window.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+# How The Application Works
 
-### `npm test`
+Once the user successfully launches the application in a browser. The user can search for books by typing the title or author of the book in the search bar. The search queries an external API that returns books that match the search. The user is able to add the books to a shelf that matches status of the book.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Project Dependencies
 
-### `npm run build`
+- Vanilla.js
+- React.js
+- FontAwesome
+- Google Fonts
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Acknowledgements
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- BooksAPI provided by Udacity
+- [React](https://reactjs.org/ ) 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Search Terms
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+'Android', 'Art', 'Artificial Intelligence', 'Astronomy', 'Austen', 'Baseball', 'Basketball', 'Bhagat', 'Biography', 'Brief', 'Business', 'Camus', 'Cervantes', 'Christie', 'Classics', 'Comics', 'Cook', 'Cricket', 'Cycling', 'Desai', 'Design', 'Development', 'Digital Marketing', 'Drama', 'Drawing', 'Dumas', 'Education', 'Everything', 'Fantasy', 'Film', 'Finance', 'First', 'Fitness', 'Football', 'Future', 'Games', 'Gandhi', 'Homer', 'Horror', 'Hugo', 'Ibsen', 'Journey', 'Kafka', 'King', 'Lahiri', 'Larsson', 'Learn', 'Literary Fiction', 'Make', 'Manage', 'Marquez', 'Money', 'Mystery', 'Negotiate', 'Painting', 'Philosophy', 'Photography', 'Poetry', 'Production', 'Programming', 'React', 'Redux', 'River', 'Robotics', 'Rowling', 'Satire', 'Science Fiction', 'Shakespeare', 'Singh', 'Swimming', 'Tale', 'Thrun', 'Time', 'Tolstoy', 'Travel', 'Ultimate', 'Virtual Reality', 'Web Development', 'iOS'
