@@ -43,13 +43,13 @@ class Bookshelf extends Component {
                     <div className='dropdown-state'>
                       <button className="disabled-button" type="button" disabled>Move To...</button>
                       <button onClick={(e) => {this.props.newShelf(book, e.target.value);
-                        console.log(book.shelf);}} className="shelf-button-option" value="none" type="button">None</button>
+                        }} className="shelf-button-option" value="none" type="button">None</button>
                       <button onClick={(e) => {this.props.newShelf(book, e.target.value);
-                        console.log(book.shelf);}} className="shelf-button-option" value="currentlyReading" type="button">Currently Reading</button>
+                        }} className="shelf-button-option" value="currentlyReading" type="button">Currently Reading</button>
                       <button onClick={(e) => {this.props.newShelf(book, e.target.value);
-                        console.log(book.shelf);}} className="shelf-button-option" value="read" type="button">Have Read</button>
+                        }} className="shelf-button-option" value="read" type="button">Have Read</button>
                       <button onClick={(e) => {this.props.newShelf(book, e.target.value);
-                        console.log(book.shelf);}} className="shelf-button-option" value="wantToRead" type="button">Want to Read</button>
+                        }} className="shelf-button-option" value="wantToRead" type="button">Want to Read</button>
                     </div>
                   ): null
                 }
