@@ -2,7 +2,7 @@
 
 MyReads is a simple library web application that displays in their sates of:
 - Reading
-- Have README
+- Have Read
 - Want To Read
 
 The purpose of this project is to understand the fundamentals of React.js by as creating and rendering components, using Props to display data and State to update the data.
@@ -29,7 +29,7 @@ Once the user successfully launches the application in a browser. The user can s
 # Acknowledgements
 
 - BooksAPI provided by Udacity
-- [React](https://reactjs.org/ ) 
+- [React](https://reactjs.org/ )
 
 # Search Terms
 
