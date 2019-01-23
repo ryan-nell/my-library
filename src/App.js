@@ -39,7 +39,7 @@ class App extends Component {
           <div className="bookshelf-types">
             <div className="main-header">
               <h1 className="main-header-title">MyReads</h1>
-              <Link to="/BookSearch" className="search-link"><i className="fas fa-search"></i> Search</Link>
+              <Link to="/search" className="search-link"><i className="fas fa-search"></i> Search</Link>
             </div>
             <div className="shelf">
               <h1 className="shelf-header">Currently Reading</h1>
@@ -55,7 +55,7 @@ class App extends Component {
             </div>
           </div>)}
         />
-      <Route path="/booksearch" render={({history}) => (
+      <Route path="/search" render={({history}) => (
             <BookSearch
               books={this.state.books}
               newShelf={(targetBook, targetShelf) => {
