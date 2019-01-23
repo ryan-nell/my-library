@@ -12,6 +12,7 @@ This is a project that is part of the Front-End Web Developer Nanodegree by Udac
 
 - Download the repository
 - Open terminal and redirect to the directory
+- install all project dependencies with npm install
 - Type npm start
 - The application will start in a new browser window.
 
