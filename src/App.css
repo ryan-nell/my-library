@@ -1,7 +1,191 @@
 html, body, .root {
   height: 100%;
+
 }
 
-body {
-  line-height: 1.5;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* --------- Shelf Display (App.js) --------------------------------------------------  */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-bottom: 1px solid #80808033;
+  font-family: 'Merienda', cursive;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.main-header-title {
+  text-align: center;
+}
+
+.search-link {
+  text-decoration: none;
+  padding-right: 5%;
+  padding-top: 1%;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+i.fas.fa-search{
+  font-size: 20px;
+}
+
+.bookshelf-types {
+
+}
+
+.shelf {
+  padding-top: 5%;
+}
+
+.shelf-header {
+  text-align: left;
+  font-family: 'Merienda', cursive;
+  opacity: 0.7;
+}
+
+/* --------- Book Display (Bookshelf.js)--------------------------------------------------  */
+
+.book-container {
+  display: flex;
+  padding: 20px 0;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.book {
+  margin: 10px;
+  width: 128px;
+}
+
+.image-div{
+
+}
+
+.book-image {
+  width: 128px;
+  height: 193px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.shelf-button {
+  padding-left: 90%;
+  border: none;
+  background: inherit;
+  outline:none !important;
+  cursor: pointer;
+}
+
+.fas, .fa-plus-circle {
+  opacity: 0.5;
+  font-size: 40px;
+}
+
+.shelf-action {
+  padding-bottom: 15%;
+  margin-top: -15%;
+}
+
+.dropdown-state {
+  display: flex;
+  flex-direction: column;
+}
+
+.shelf-button-option {
+  border: none;
+  transition: 2s;
+  transition: opacity;
+  cursor: pointer;
+}
+.disabled-button {
+  border: none;
+}
+
+.shelf-button-option:hover {
+  background-color: #d3d3d3;
+  transition: .5s;
+}
+
+.book-content {
+  margin-top: -15%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.book-title {
+  font-size: 14px;
+  padding: 1px;
+}
+
+.book-authors {
+  font-size: 12px;
+  opacity: 0.5;
+  padding: 2px;
+}
+
+
+
+/* --------- Search Page (BookSearch.js) --------------------------------------------------  */
+
+
+.form-container {
+  padding: 20px 0;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.previous-page-link {
+  display: flex;
+  margin-top: 20px;
+  text-decoration: none;
+}
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+.fas, .fa-arrow-left {
+  font-size: 25px;
+}
+
+.book-search-div {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.book-search-input {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  border:none;
+  font-size: 24px;
+  font-family: 'Indie Flower', cursive;
+  border-bottom: 1px solid black;
+  outline:none !important;
+  background-color: inherit;
+}
+
+.book-search-input::placeholder {
+  opacity: 0.2;
+}
+
+.book-search-result-container {
+  margin-right: 5px;
 }

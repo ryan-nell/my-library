@@ -46,16 +46,17 @@ class BookSearch extends Component {
 
     return (
       <div className="search-container">
-        <div>
-          <Link to="/" className="search-input">Back</Link>
-          <form className="book-search-form">
+        <div className="form-container">
+          <Link to="/" className="previous-page-link"><i className="fas fa-arrow-left"></i></Link>
+          <div className="book-search-div">
             <input className="book-search-input" type="text"
               placeholder="Search By Tilte or Author"
               value={query}
-              onChange={(event) => this.updateSearchQuery(event.target.value)}/>
-          </form>
+              onChange={(event) => this.updateSearchQuery(event.target.value)}
+            />
+          </div>
         </div>
-        <div className="search-books-results">
+        <div className="book-search-result-container">
           <Bookshelf
             books={bookResults}
             newShelf={newShelf}

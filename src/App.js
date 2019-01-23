@@ -37,23 +37,25 @@ class App extends Component {
       <div className="App">
         <Route exact path='/' render={() => (
           <div className="bookshelf-types">
-            <div>
+            <div className="main-header">
+              <h1 className="main-header-title">MyReads</h1>
+              <Link to="/BookSearch" className="search-link"><i className="fas fa-search"></i> Search</Link>
+            </div>
+            <div className="shelf">
               <h1 className="shelf-header">Currently Reading</h1>
-              
               <Bookshelf newShelf={this.updateShelf}  books={this.state.books.filter((currentBook) => (currentBook.shelf === "currentlyReading"))}/>
             </div>
-            <div>
+            <div className="shelf">
               <h1 className="shelf-header">Have Read</h1>
               <Bookshelf newShelf={this.updateShelf} books={this.state.books.filter((currentBook) => (currentBook.shelf === "read"))}/>
             </div>
-            <div>
+            <div className="shelf">
               <h1 className="shelf-header">Want To Read</h1>
               <Bookshelf newShelf={this.updateShelf} books={this.state.books.filter((currentBook) => (currentBook.shelf === "wantToRead"))}/>
             </div>
-            <Link to="/BookSearch" className="search-input">Search</Link>
           </div>)}
         />
-        <Route path="/booksearch" render={({history}) => (
+      <Route path="/booksearch" render={({history}) => (
             <BookSearch
               books={this.state.books}
               newShelf={(targetBook, targetShelf) => {
