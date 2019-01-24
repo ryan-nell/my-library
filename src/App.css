@@ -93,33 +93,18 @@ i.fas.fa-search{
   font-size: 40px;
 }
 
-.shelf-action {
+/* .shelf-action {
   padding-bottom: 15%;
   margin-top: -15%;
-}
+} */
 
 .dropdown-state {
   display: flex;
-  flex-direction: column;
-}
 
-.shelf-button-option {
-  border: none;
-  transition: 2s;
-  transition: opacity;
-  cursor: pointer;
-}
-.disabled-button {
-  border: none;
-}
-
-.shelf-button-option:hover {
-  background-color: #d3d3d3;
-  transition: .5s;
 }
 
 .book-content {
-  margin-top: -15%;
+  /* margin-top: -15%; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -136,10 +121,7 @@ i.fas.fa-search{
   padding: 2px;
 }
 
-
-
 /* --------- Search Page (BookSearch.js) --------------------------------------------------  */
-
 
 .form-container {
   padding: 20px 0;

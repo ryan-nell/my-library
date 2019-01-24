@@ -22,7 +22,6 @@ class App extends Component {
     BooksAPI.getAll().then(books => {
       this.setState({ books });
     });
-
   };
 
   // Update the state of the books on from API
@@ -33,6 +32,8 @@ class App extends Component {
   };
 
   render() {
+    const { books } = this.state;
+
     return (
       <div className="App">
         <Route exact path='/' render={() => (
@@ -43,15 +44,15 @@ class App extends Component {
             </div>
             <div className="shelf">
               <h1 className="shelf-header">Currently Reading</h1>
-              <Bookshelf newShelf={this.updateShelf}  books={this.state.books.filter((currentBook) => (currentBook.shelf === "currentlyReading"))}/>
+              <Bookshelf newShelf={this.updateShelf}  books={books.filter((currentBook) => (currentBook.shelf === "currentlyReading"))}/>
             </div>
             <div className="shelf">
               <h1 className="shelf-header">Have Read</h1>
-              <Bookshelf newShelf={this.updateShelf} books={this.state.books.filter((currentBook) => (currentBook.shelf === "read"))}/>
+              <Bookshelf newShelf={this.updateShelf} books={books.filter((currentBook) => (currentBook.shelf === "read"))}/>
             </div>
             <div className="shelf">
               <h1 className="shelf-header">Want To Read</h1>
-              <Bookshelf newShelf={this.updateShelf} books={this.state.books.filter((currentBook) => (currentBook.shelf === "wantToRead"))}/>
+              <Bookshelf newShelf={this.updateShelf} books={books.filter((currentBook) => (currentBook.shelf === "wantToRead"))}/>
             </div>
           </div>)}
         />
