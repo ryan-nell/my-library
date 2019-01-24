@@ -45,7 +45,7 @@ class BookSearch extends Component {
 
   render() {
     const {bookResults, query} = this.state;
-    const {newShelf} = this.props;
+    const {newShelf, books} = this.props;
 
     return (
       <div className="search-container">
@@ -61,7 +61,19 @@ class BookSearch extends Component {
         </div>
         <div className="book-search-result-container">
           <Bookshelf
-            books={bookResults}
+            books={bookResults.filter((newbook) =>{
+              for (let book of books) {
+              if(book.id === newbook.id){
+                newbook.shelf = book.shelf
+                return newbook
+                }
+                else {
+                  newbook.shelf = 'none'
+                }
+              }
+              return newbook
+            })
+            }
             newShelf={newShelf}
           />
         </div>
